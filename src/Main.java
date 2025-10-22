@@ -8,7 +8,7 @@ public class Main {
     }
     // EJ1: Mostrar información de un libro
     static void mostrarLibro (String titulo, String autor, int numPag) {
-    // Después de crear la función he escrito los diferentes prints que deberían aparecer al usarse
+    // Después de crear la función he escrito los diferentes prints que deberían aparecer al usarse ésta
         System.out.println("Título: " + titulo);
         System.out.println("Autor: " + autor);
         System.out.println("Numero de paginas: " + numPag);
@@ -28,6 +28,18 @@ public class Main {
     return tiempoTotal;
     }
 
+    //EJ4: Mostrar precio con impuesto y descuento
+    static void calcularImpuestoYDescuento (double precio, int impuesto, int descuento) {
+    double precioImpuesto = (precio * impuesto / 100.0) + precio;
+    double precioDescuento = (precio * descuento / 100.0);
+    double precioFinal = precioImpuesto - precioDescuento;
+        System.out.println("Precio: " + precio + "€");
+        System.out.printf("Impuesto " + impuesto + "%");
+        System.out.printf("Precio tras aplicar impuesto " + precioImpuesto + "€");
+        System.out.println("PrecioConDescuento " + precioDescuento + "%");
+        System.out.println("Precio tras aplicar impuesto y descuento " + precioFinal);
 
+
+    }
 
 }
