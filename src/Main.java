@@ -1,7 +1,3 @@
-import org.w3c.dom.ls.LSOutput;
-
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
 
@@ -11,7 +7,7 @@ public class Main {
     // Después de crear la función he escrito los diferentes prints que deberían aparecer al usarse ésta
         System.out.println("Título: " + titulo);
         System.out.println("Autor: " + autor);
-        System.out.println("Numero de paginas: " + numPag);
+        System.out.println("Número de páginas: " + numPag);
     }
 
     // EJ2: Devolver la duración media de 3 canciones
@@ -23,23 +19,19 @@ public class Main {
     /*EJ3: Devolver tiempo restante de un alquiler en días
     **Nota: Todas aquellas funciones que no sean "void" aparecerán como error hasta que no se introduzca un return** */
 
-    static int diasTiempoRestanteAlquiler (int semanasTotales, int diasTranscurridos) {
+    static int tiempoRestanteAlquiler (int semanasTotales, int diasTranscurridos) {
     int tiempoTotal = (semanasTotales * 7) - diasTranscurridos;
     return tiempoTotal;
     }
 
     //EJ4: Mostrar precio con impuesto y descuento
     static void calcularImpuestoYDescuento (double precio, int impuesto, int descuento) {
-    double precioImpuesto = (precio * impuesto / 100.0) + precio;
-    double precioDescuento = (precio * descuento / 100.0);
-    double precioFinal = precioImpuesto - precioDescuento;
-        System.out.println("Precio: " + precio + "€");
+    double precioConImpuesto = (precio * impuesto / 100.0) + precio;
+    double precioConDescuento = (precioConImpuesto * descuento / 100.0) - precioConImpuesto;
+        System.out.println("Precio Original: " + precio + "€");
         System.out.printf("Impuesto " + impuesto + "%");
-        System.out.printf("Precio tras aplicar impuesto " + precioImpuesto + "€");
-        System.out.println("PrecioConDescuento " + precioDescuento + "%");
-        System.out.println("Precio tras aplicar impuesto y descuento " + precioFinal);
-
-
+        System.out.printf("Precio con impuesto " + precioConImpuesto + "€");
+        System.out.println("Descuento " + descuento + "%");
+        System.out.println("Precio con descuento " + precioConDescuento);
     }
-
 }
