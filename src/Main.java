@@ -34,4 +34,9 @@ public class Main {
         System.out.println("Descuento " + descuento + "%");
         System.out.println("Precio con descuento " + precioConDescuento);
     }
+    //EJ5:Devolver porcentaje de videojuegos del inventario
+    static double porcentajeVideojuegos(int juegos, int totalArticulos) {
+        double porcentaje = (juegos * 100.0) / totalArticulos;
+        return porcentaje;
+    }
 }
