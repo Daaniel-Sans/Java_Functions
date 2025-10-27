@@ -1,6 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-
+        //Llamada de prueba para verificar que he corregido correctamente el error de cálculo del ej4
+        calcularImpuestoYDescuento(100.0, 21, 10);
     }
     // EJ1: Mostrar información de un libro
     static void mostrarLibro (String titulo, String autor, int numPag) {
@@ -27,12 +28,12 @@ public class Main {
     //EJ4: Mostrar precio con impuesto y descuento
     static void calcularImpuestoYDescuento (double precio, int impuesto, int descuento) {
     double precioConImpuesto = (precio * impuesto / 100.0) + precio;
-    double precioConDescuento = (precioConImpuesto * descuento / 100.0) - precioConImpuesto;
+    double precioConDescuento = precioConImpuesto - (precioConImpuesto * descuento / 100.0) ;
         System.out.println("Precio Original: " + precio + "€");
-        System.out.printf("Impuesto " + impuesto + "%");
-        System.out.printf("Precio con impuesto " + precioConImpuesto + "€");
+        System.out.println("Impuesto " + impuesto + "%");
+        System.out.println("Precio con impuesto " + precioConImpuesto + "€");
         System.out.println("Descuento " + descuento + "%");
-        System.out.println("Precio con descuento " + precioConDescuento);
+        System.out.println("Precio con descuento " + precioConDescuento + "€");
     }
     //EJ5:Devolver porcentaje de videojuegos del inventario
     static double porcentajeVideojuegos(int juegos, int totalArticulos) {
